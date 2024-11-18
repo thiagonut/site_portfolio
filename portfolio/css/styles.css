@@ -1,0 +1,273 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #060606;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  animation: fadeIn 1s ease-out;
+  text-decoration: none;
+}
+body header {
+  background: linear-gradient( #2a2a2a, #000000);
+  color: white;
+  padding: 40px;
+  text-align: center;
+  width: 100%;
+  animation: fadeIn 1.5s ease-out forwards;
+}
+body header h1 {
+  font-size: 3.5em;
+  margin-bottom: 0.5em;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+body header span {
+  font-size: 1.5em;
+  margin: 0;
+  letter-spacing: 0.1em;
+}
+body section {
+  text-decoration: none;
+  padding: 40px;
+  margin: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  background-color: #ECEFF1;
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+  animation: slideUp 1s ease-out;
+}
+body section:hover {
+  transform: scale(1.05);
+  
+}
+body section .explore-btn {
+  text-decoration: none;
+  padding: 12px 25px;
+  font-size: 1.1em;
+  background-color: #FF4500;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  animation: pulse 2s infinite;
+}
+body section .explore-btn:hover {
+  background-color: #cc3700;
+  transform: translateY(-5px) scale(1.05); /* Efeito de movimento e escala */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+body section .back-btn {
+  padding: 12px 25px;
+  font-size: 1.1em;
+  background-color: #FF4500;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+}
+body section .back-btn:hover {
+  background-color: #cc3700;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+body .contact {
+  background: linear-gradient(145deg, #FFB6C1, #FF69B4);
+  color: white;
+  padding: 50px;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  animation: slideUp 1.5s ease-out;
+}
+body .contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+body .contact form input, body .contact form textarea {
+  padding: 12px;
+  font-size: 1.1em;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+  transition: border 0.3s ease;
+  background-color: #f9f9f9;
+}
+body .contact form input:focus, body .contact form textarea:focus {
+  border: 1px solid #FF4500;
+  box-shadow: 0 0 8px rgba(98, 0, 234, 0.3);
+  background-color: #fff;
+}
+body .contact form button {
+  text-decoration: none;
+  padding: 15px;
+  font-size: 1.2em;
+  background-color: #FF4500;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+body .contact form button:hover {
+  background-color: #cc3700;
+  transform: translateY(-5px);
+}
+body footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 30px;
+  }
+  header h1 {
+    font-size: 2.5em;
+  }
+  header p {
+    font-size: 1.2em;
+  }
+  section {
+    padding: 20px;
+    margin: 15px;
+  }
+  .explore-btn {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+  .back-btn {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+  .photos {
+    flex-direction: column;
+    align-items: center;
+  }
+  .photos .portifolio {
+    max-width: 50%;
+    height: auto;
+  }
+  .contact {
+    width: 90%;
+    padding: 30px;
+  }
+}
+@media (max-width: 480px) {
+  header {
+    padding: 20px;
+  }
+  header h1 {
+    font-size: 2em;
+  }
+  header p {
+    font-size: 1em;
+  }
+  section {
+    padding: 15px;
+    margin: 10px;
+  }
+  .explore-btn {
+    padding: 8px 18px;
+    font-size: 0.9em;
+  }
+  .back-btn {
+    padding: 8px 18px;
+    font-size: 0.9em;
+  }
+}
+.back-btn {
+  text-decoration: none;
+  padding: 12px 25px;
+  font-size: 1.1em;
+  background-color: #FF4500;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+.back-btn:hover {
+  background-color: #cc3700;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.photos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  margin: 20px;
+  background-color: #ECEFF1;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.portifolio {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-out;
+}
+
+.room-info {
+  max-width: 800px;
+  margin-top: 20px;
+}
+
+.feature {
+  margin-bottom: 20px;
+}
